@@ -34,8 +34,10 @@ for rotas in (permutar(pontos_de_entrega)):
     rotas.insert(0, 'R')
     rotas.append('R')
     for rota_atual in range(len(rotas)-1):
-        linha_x = abs(coordenadas[rotas[rota_atual]][1] - coordenadas[rotas[rota_atual+1]][1])
-        linha_y = abs(coordenadas[rotas[rota_atual]][0] - coordenadas[rotas[rota_atual+1]][0])
+        linha_x = abs(coordenadas[rotas[rota_atual]][1] - 
+                      coordenadas[rotas[rota_atual+1]][1])
+        linha_y = abs(coordenadas[rotas[rota_atual]][0] - 
+                      coordenadas[rotas[rota_atual+1]][0])
         custo_atual += linha_x + linha_y
     if custo_atual < custo_otimo:
         custo_otimo = custo_atual
